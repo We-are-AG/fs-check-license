@@ -18,6 +18,7 @@ $settings = wp_parse_args( $settings, array(
 	<tr><th colspan="2" style="text-align:left;">
 			<h3><?php _e( 'Check License on Freemius', 'fs-check-license' ) ?> &ndash; <?php _e( 'API credentials', 'fs-check-license' ) ?></h3>
 			<p><?php printf( __( "Get your developer credentials from %s Freemius Dashboard > My Profile %s", 'fs-check-license' ), "<a href='https://dashboard.freemius.com/#/profile/'>", '</a>' ) ?></p>
+			<p><?php printf( __( "You Need to Fill up all this fields to use the Freemius License Check", 'fs-check-license' ) )?></p>
 		</th></tr>
 
 	<tr>

@@ -31,25 +31,35 @@ if($check_credentials == true)
 {
 ?>
 <h1 class="fs_check_title"><?php _e('Freemius License Check', 'fs-check-license') ?></h1>
-
 <form method="POST">
-    <div class="">
-        <select name="plugin_id">
-			<?php foreach ($plugins as $r) {
-				foreach ($r as $plgn) { ?>
-                    <option value=" <?php echo $plgn->id ?>" <?php if (isset($_POST['plugin_id']) && $plgn->id == $_POST['plugin_id']) {
-						echo 'selected';
-					} ?>>
-						<?php echo $plgn->title ?> - <?php echo $plgn->id ?> </option>
-					<?php
-				}
-			}
-			?>
-        </select>
-        <input name="license_url" type="text" id="license_url" value="<?php if (isset($_POST['license_url'])) {
-			echo $_POST['license_url'];
-		} ?>"> <input type="submit" name="submit" value="Validate License" class="btn-primary">
-    </div>
+	<table>
+		<tr>
+			<td>
+				<select name="plugin_id">
+					<?php foreach ($plugins as $r) {
+						foreach ($r as $plgn) { ?>
+							<option value=" <?php echo $plgn->id ?>" <?php if (isset($_POST['plugin_id']) && $plgn->id == $_POST['plugin_id']) {
+								echo 'selected';
+							} ?>>
+								<?php echo $plgn->title ?> - <?php echo $plgn->id ?> </option>
+							<?php
+						}
+					}
+					?>
+				</select>
+			</td>
+			<td> 
+			<input name="license_url" type="text" id="license_url" value="<?php if (isset($_POST['license_url'])) {
+				echo $_POST['license_url'];
+			} ?>"> 
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2" class="center-div">
+				<input type="submit" name="submit" value="Validate License" class="btn-primary">
+			</td>
+		</tr>
+	</table>
 </form>
 
 <div class="message" style="margin-top: 30px;">
@@ -62,6 +72,6 @@ if($check_credentials == true)
 }
 else{
 
-    echo '<h1 class="message_danger"> Error Returning Plugin List, Please check if you have inputted all credentials needed on Admin Settings </h1>';
+    echo '<h2 class="error"> Error Returning Plugin List, Please check if you have inputted all credentials needed on Admin Settings </h2>';
 }
 ?>
