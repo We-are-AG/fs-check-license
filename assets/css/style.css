@@ -1,0 +1,14 @@
+.fs_check_title {
+    margin-top:    20px;
+    margin-bottom: 40px;
+}
+
+.message_success {
+    margin-top: 10px !important;
+    color:      green !important;
+}
+
+.message_danger {
+    margin-top: 10px !important;
+    color:      red !important;
+}
