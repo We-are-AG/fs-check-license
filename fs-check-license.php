@@ -47,7 +47,8 @@ class FS_Check_License {
 	 * @return void
 	 */
 	public function FS_menu() {
-		add_menu_page($this->plugin_name, 'FS License Check', 'administrator', 'fs_check_license', array($this, 'admin_index'), 'dashicons-chart-area', 26);
+		add_menu_page($this->plugin_name, 'FS License Check','edit_others_pages', 'fs_check_license', array($this, 'admin_index'), 'dashicons-chart-area', 26);
+		
 	}
 
 	/**
@@ -93,12 +94,16 @@ class FS_Check_License {
 
 		register_setting('general', 'WG_CL_credentials');
 
-		add_settings_section(
-			'fstm_general_section',
-			'',
-			array($this, 'admin_section_render'),
-			'general'
-		);
+		if ( is_admin())
+			{
+				add_settings_section(
+					'fstm_general_section',
+					'',
+					array($this, 'admin_section_render'),
+					'general'
+				);
+			}
+	
 	}
 
 	public function admin_section_render() {
