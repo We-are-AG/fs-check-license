@@ -48,7 +48,7 @@ if($check_credentials == true)
         </select>
         <input name="license_url" type="text" id="license_url" value="<?php if (isset($_POST['license_url'])) {
 			echo $_POST['license_url'];
-		} ?>"> <input type="submit" name="submit" value="Validate License">
+		} ?>"> <input type="submit" name="submit" value="Validate License" class="btn-primary">
     </div>
 </form>
 
