@@ -14,32 +14,35 @@
 }
 
 .btn-primary {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 10px;
+    background-color: #4CAF50;
+    border:           none;
+    color:            white;
+    padding:          7px;
+    text-align:       center;
+    text-decoration:  none;
+    display:          inline-block;
+    font-size:        12px;
+    border-radius:    4px;
 }
 
-.center-div
-{
+.center-div {
     text-align: center;
 }
 
-.error{
+.error {
     margin-top: 20px !important;
     color:      red !important;
-
 }
+
 .flex-container {
     display: flex;
-  }
-  
-  .flex-container > div {
-    margin: 10px;
+}
+
+.flex-container > div {
+    margin:  10px;
     padding: 20px;
-  }
+}
+
+.fs-message {
+    margin-top: 30px;
+}
