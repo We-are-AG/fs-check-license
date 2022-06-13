@@ -113,13 +113,7 @@ class FS_Check_License {
 	public function admin_section_render() {
 		include "core/admin-section.php";
 	}
-
-
-	/**
-	 * @param $params
-	 *
-	 * @return false|string
-	 */
+	
 	/**
 	 * @param $plugin_id
 	 * @param $url
