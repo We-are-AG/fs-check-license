@@ -15,5 +15,8 @@ Once these are added, you can go to FS License Check page to check the status of
 
 == Changelog ==
 
+= v1.0.1 =
+* Add Email registered on the valid License
+
 = v1.0.0 =
 * First release.
