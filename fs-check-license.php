@@ -168,13 +168,13 @@ class FS_Check_License {
 			}
 
 			if (isset($license_checked->activated) && $license_checked->activated === 0 && $expiration >= $now) {
-				$message = '<span class="message_success"><strong>License is Valid</strong> but Deactivated.<br />Expiration Date: ' . date_format(date_create($license_checked->expiration), "d-m-Y") . '<br />License ID: ' . $license_checked->id . '<br />Licence key: ' . $license_checked->secret_key . '<br/> Email Address: '. $user_details->email. '</span>';
+				$message = '<span class="message_success"><strong>License is Valid</strong> but Deactivated.<br />Expiration Date: ' . date_format(date_create($license_checked->expiration), "d-M-Y") . '<br />License ID: ' . $license_checked->id . '<br />Licence key: ' . $license_checked->secret_key . '<br/> Email Address: '. $user_details->email. '</span>';
 			}
 			if (isset($license_checked->activated) && $license_checked->activated === 1 && $expiration >= $now) {
-				$message = '<span class="message_success"> <strong>License is Valid</strong> and Activated<br/>Expiration Date: ' . date_format(date_create($license_checked->expiration), "d-m-Y") . '<br /> License ID: ' . $license_checked->id . '<br />Licence key: ' . $license_checked->secret_key . '<br/> Email Address: '. $user_details->email. '</span>';
+				$message = '<span class="message_success"> <strong>License is Valid</strong> and Activated<br/>Expiration Date: ' . date_format(date_create($license_checked->expiration), "d-M-Y") . '<br /> License ID: ' . $license_checked->id . '<br />Licence key: ' . $license_checked->secret_key . '<br/> Email Address: '. $user_details->email. '</span>';
 			}
 			if ($expiration <= $now) {
-				$message = '<span class="message_danger"> <strong>License is Not Valid</strong><br />Expiration Date: ' . date_format(date_create($license_checked->expiration), "d-m-Y") . '<br />License ID: ' . $license_checked->id . '<br />Licence key: ' . $license_checked->secret_key . '</span>';
+				$message = '<span class="message_danger"> <strong>License is Not Valid</strong><br />Expiration Date: ' . date_format(date_create($license_checked->expiration), "d-M-Y") . '<br />License ID: ' . $license_checked->id . '<br />Licence key: ' . $license_checked->secret_key . '</span>';
 			}
 		} else {
 			$message = ' <span class="message_danger">Website has not purchased this plugin / not found, double check on Freemius.</span> ';
